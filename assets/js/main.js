@@ -105,6 +105,6 @@
     timerID = setInterval(gotoNext, interval);
   }
 
-  //точка входа
+  // точка входа
   init();
 }());
