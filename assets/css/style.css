@@ -1,0 +1,113 @@
+/*
+essential styles:
+these make the slideshow work
+*/
+.slides {
+  position: relative;
+  height: 150px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -9999;
+  -webkit-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.active {
+  opacity: 1;
+}
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+.slide {
+  font-size: 40px;
+  padding: 50px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.slide:nth-of-type(1) {
+  background: red;
+}
+
+.slide:nth-of-type(2) {
+  background: orange;
+}
+
+.slide:nth-of-type(3) {
+  background: green;
+}
+
+.slide:nth-of-type(4) {
+  background: blue;
+}
+
+.slide:nth-of-type(5) {
+  background: purple;
+}
+
+.container {
+  min-width: 992px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.slides {
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.control {
+  padding: 10px 20px;
+  background-color: lightsteelblue;
+  display: block;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.indicator {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: steelblue;
+}
+.indicator.active {
+  background-color: tomato;
+}
