@@ -108,7 +108,24 @@ body {
   height: 30px;
   border-radius: 15px;
   background-color: steelblue;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .indicator.active {
   background-color: tomato;
+}
+
+.control-pause {
+  position: relative;
+}
+.control-pause > span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }

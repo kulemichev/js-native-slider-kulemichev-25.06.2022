@@ -102,8 +102,20 @@ body {
   height: 30px;
   border-radius: 15px;
   background-color: steelblue;
+  cursor: pointer;
+  user-select: none;
 
   &.active {
     background-color: tomato;
+  }
+}
+
+.control-pause {
+  position: relative;
+  > span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
