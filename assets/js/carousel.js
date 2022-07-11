@@ -48,9 +48,8 @@ class Carousel {
     this.prevBtn = document.querySelector('#prev');
     this.nextBtn = document.querySelector('#next')
 
-    this.pauseIcon = this.container.querySelector('fa-pause-icon');
-    this.playIcon = this.container.querySelector('fa-play-icon');
-
+    this.pauseIcon = this.container.querySelector('#fa-pause-icon');
+    this.playIcon = this.container.querySelector('#fa-play-icon');
     this.isPlaying ? this._pauseVisible() : this._playVisible();
   }
 
@@ -94,9 +93,9 @@ class Carousel {
   }
 
   _pressKey(e) {
-    if (e.code === CODE_LEFT_ARROW) this.prev();
-    if (e.code === CODE_RIGHT_ARROW) this.next();
-    if (e.code === CODE_SPACE) this.pausePlay();
+    if (e.code === this.CODE_LEFT_ARROW) this.prev();
+    if (e.code === this.CODE_RIGHT_ARROW) this.next();
+    if (e.code === this.CODE_SPACE) this.pausePlay();
   }
 
   _tick(flag = true) {
