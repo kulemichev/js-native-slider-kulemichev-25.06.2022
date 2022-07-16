@@ -120,15 +120,19 @@ class Carousel {
   }
 
   _pause() {
-    clearInterval(this.timerID);
-    this.isPlaying = false;
-    this._playVisible();
+    if (this.isPlaying) {
+      this._playVisible();
+      this.isPlaying = false;
+      clearInterval(this.timerID);
+    }
   }
 
   _play() {
-    this.isPlaying = true;
-    this._pauseVisible();
-    this._tick();
+    if (!this.isPlaying) {
+      this._pauseVisible();
+      this.isPlaying = true;
+      this._tick();
+    }
   }
 
   _indicate(e) {
